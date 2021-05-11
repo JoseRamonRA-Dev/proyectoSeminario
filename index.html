@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icono-->
+    <script src="https://kit.fontawesome.com/af11bd2623.js" crossorigin="anonymous"></script>
+    <!-- Para el slider, bxSlider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
+  <link rel="stylesheet" href="css/estilo.css">
+   <title>Sistema Empatines</title>
+</head>
+<body>
+    
+    <div id="wrapper">
+        <div id="banner-wrapper">
+            <header>
+                <div class="header-inner">
+                    <a id="logo" href="index.html">
+                      <img style="width: 10%; height: 90px;" width="10%" height="30" src="img/patin.png" alt="Autonoma de ags">
+                    </a>
+                </div>
+                <nav>
+                    <a href="" id="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#contactos">Contactos</a>
+                        </li>
+                        <li>
+                            <a href="#acerca">Acerca de nosotros</a>
+                        </li>
+                        <li>
+                            <a href="#" id="videoj">Videojuego</a>
+                        </li>
+                        <li>
+                            <button class="button button1" id="iniciar">Iniciar Sesion</button>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            
+        </div>
+    </div>
+    <div id="contenido">
+    <section class="slider">
+        <ul class="slider1">
+            <li><img src="img/imagen1.jpg" alt=""></li>
+            <li><img src="img/imagen2.jpg" alt=""></li>
+            <li><img src="img/imagen3.jpg" alt=""></li>
+        </ul>   
+    </section>
+   <h3 id="contactos">Contactos </h3>
+    <section class="parteuno" id="contactos">
+        <div class="icon-wrap">
+            <img src="/img/fundacionenm.png" alt="">
+        </div>
+            <h1>Fundacion en Movimiento AC </h1>
+            <p class="p2">
+                Asociación Civil constituida en 2007 y en operaciones desde 2010. Métodos enfocados en la atención de la comunidad escolar (alumnos, padres de familia y maestros), así como en los centros de trabajo (trabajadores, líderes) que impactan directamente a la sociedad en general, basados en tres ejes rectores:
+               <br> - Prevención y atención del bullying
+               <br> - Promoción de la Cultura y Educación para la Paz
+               <br> - Prevención y atención del mobbing
+            </p>
+            <img src="/img/fundacionenm2.jpg" alt="">
+    </section>
+    <section class="parteuno" id="contactos">
+        <div class="icon-wrap">
+        </div>
+            <h1>Fundacion  </h1>
+            <p class="p2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat doloribus vel amet, 
+                saepe non, quibusdam voluptatem earum consequuntur aspernatur similique sed minus aperiam soluta quam velit! 
+                Aut est molestias assumenda!
+            </p>
+        
+    </section>
+
+    <section class="parteuno" id="contactos">
+        <div class="icon-wrap">
+        </div>
+            <h1>Fundacion en Movimiento AC </h1>
+            <p class="p2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat doloribus vel amet, 
+                saepe non, quibusdam voluptatem earum consequuntur aspernatur similique sed minus aperiam soluta quam velit! 
+                Aut est molestias assumenda!
+            </p>
+       
+    </section>
+    
+    <div style="margin-top: 90%;">
+        <br>
+        <h3 id="acerca">
+            Acerca de nosotros
+        </h3>
+        <p>Somos una pagina que ayuda a las, les y los estudiantes a poder tener una mejor vida. Ya que tratamos de ayudar a erradicar el Bullying en las escuelas</p>
+    </div>
+</div>
+    <footer>
+        <div class="banner-wraper">
+            <div class="icon-text">
+                <div class="icon-text-icon">
+                    <ul>
+                        <li>
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li><a href="#algo">Alguna seccion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts para que funione el slider, con JavaScript y bxSlider-->
+    <script>
+        $(document).ready(function(){
+            $('.slider1').bxSlider({
+                mode: 'fade'
+            })
+            $('.slider2').bxSlider({
+                mode: 'fade'
+            })
+            $('.slider3').bxSlider({
+                mode: 'fade'
+            })
+        })
+    </script>
+      
+      <script src="js/popper.min.js"></script>
+      <script src="js/iniciar.js"></script>
+</body>
+</html>
