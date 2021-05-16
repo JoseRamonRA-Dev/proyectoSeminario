@@ -1,7 +1,7 @@
 $('#videoj').click(function(){
     var esperar = 2000;
     $.ajax({
-       url: "../juego.html",
+       url: "../part10.html",
         beforeSend : function(){
             $('#contenido').text('Cargando...');
         },
@@ -17,11 +17,11 @@ $('#videoj').click(function(){
 
  $('#iniciar').click(function(){
     var esperar = 2000;
+    var screen = $('#loading');
+    pantalla(screen);
     $.ajax({
        url: "../inicio.html",
-        beforeSend : function(){
-            $('#contenido').text('Cargando...');
-        },
+       beforeSend: pantalla(screen),
         success : function(data){
             setTimeout(function(){
               $('#contenido').html(data);  
@@ -34,11 +34,11 @@ $('#videoj').click(function(){
 
  $('#entrar').click(function(){
     var esperar = 2000;
+    var screen = $('#loading');
+    pantalla(screen);
     $.ajax({
        url: "../entrar.html",
-        beforeSend : function(){
-            $('#contenido2').text('Cargando...');
-        },
+        beforeSend : pantalla(screen),
         success : function(data){
             setTimeout(function(){
               $('#contenido2').html(data);  
@@ -48,3 +48,13 @@ $('#videoj').click(function(){
         }
     });
  });
+
+ function pantalla(screen){
+    $(document)
+        .ajaxStart(function () {
+            screen.fadeIn();
+        })
+        .ajaxStop(function () {
+            screen.fadeOut();
+        });
+}

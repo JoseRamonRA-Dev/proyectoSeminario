@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
 
   <link rel="stylesheet" href="css/estilo.css">
    <title>Sistema Empatines</title>
@@ -40,7 +40,7 @@
                             <a href="#acerca">Acerca de nosotros</a>
                         </li>
                         <li>
-                            <a href="#" id="videoj">Videojuego</a>
+                            <a target="_blank" href="juego.html" >Videojuego</a>
                         </li>
                         <li>
                             <button class="button button1" id="iniciar">Iniciar Sesion</button>
@@ -49,10 +49,12 @@
                 </nav>
             </header>
 
-            
+            <div id="loading" style="display: none;"><img src="img/load.svg" alt=""></div>
         </div>
     </div>
+    
     <div id="contenido">
+        <h3>Bienvenido</h3>
     <section class="slider">
         <ul class="slider1">
             <li><img src="img/imagen1.jpg" alt=""></li>
@@ -63,7 +65,8 @@
    <h3 id="contactos">Contactos </h3>
     <section class="parteuno" id="contactos">
         <div class="icon-wrap">
-            <img src="/img/fundacionenm.png" alt="">
+            <a title="Fundación en movimiento" target="_blank" href="https://www.fundacionenmovimiento.org.mx/"><img class="redondear" src="/img/fundacionenm.png" alt=""></a>
+            
         </div>
             <h1>Fundacion en Movimiento AC </h1>
             <p class="p2">
@@ -74,7 +77,7 @@
             </p>
             <img src="/img/fundacionenm2.jpg" alt="">
     </section>
-    <section class="parteuno" id="contactos">
+    <section class="partedos" id="contactos">
         <div class="icon-wrap">
         </div>
             <h1>Fundacion  </h1>
@@ -86,7 +89,7 @@
         
     </section>
 
-    <section class="parteuno" id="contactos">
+    <section class="partedos" id="contactos">
         <div class="icon-wrap">
         </div>
             <h1>Fundacion en Movimiento AC </h1>
@@ -106,6 +109,7 @@
         <p>Somos una pagina que ayuda a las, les y los estudiantes a poder tener una mejor vida. Ya que tratamos de ayudar a erradicar el Bullying en las escuelas</p>
     </div>
 </div>
+
     <footer>
         <div class="banner-wraper">
             <div class="icon-text">

@@ -116,11 +116,22 @@ nav ul li a{
 
 .parteuno{
     width: 31.5%;
+    float: right;
+    padding: 10px;
+    text-align: center;
+}
+
+.partedos{
+    width: 63%;
     float: left;
     padding: 10px;
     text-align: center;
 }
 
+.redondear {
+    border-radius: 100%;
+    border:10px solid rgb(39, 250, 67);
+}
 .button {
     border: none;
     color: white;
@@ -232,4 +243,25 @@ nav ul li a{
     color: white;
     margin: 16px 0;
     font-size: 16px;
+  }
+
+  /*Para el loading*/
+  #loading {
+    background-color: rgba(25,25,25,0.7);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    margin-top: 0;
+    top: 0;
+    text-align: center;
+  }
+  #loading img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: -50px;
+    margin-left: -50px;
+    margin-left: 50%;
+    top: 50%;
   }
