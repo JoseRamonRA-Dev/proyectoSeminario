@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    
+    body {
+        background: #ecf0f1;
+    }
+    
+    p {
+        color: #524c56;
+        font-size: 160%;
+        line-height: 155%;
+        padding: 3%;
+        text-indent: 2%;
+        text-align: justify;
+    }
+    
+    .p2 {
+        color: #524c56;
+        font-size: 140%;
+        line-height: 155%;
+        padding: 3%;
+        text-indent: 2%;
+        text-align: justify;
+    }
+    
+    h3 {
+        font-size: 175%;
+        line-height: 155%;
+        font-weight: 500;
+        color: #524c56;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0;
+    }
+    
+    a {
+        color: #524c56;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    a:hover {
+        color: #c3d7df;
+    }
+    
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+    
+    #wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    #contenido {
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: 77.6vh;
+    }
+    
+    #banner-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 0 3% 0;
+    }
+    
+    header {
+        width: 100%;
+        height: 100px;
+        top: 0;
+        left: 0;
+    }
+    
+    header #logo img {
+        margin: 20px;
+        float: left;
+        width: 50px;
+    }
+    /*Para la navegacion*/
+    
+    nav {
+        float: right;
+        padding: 25px 20px 0 0;
+    }
+    
+    #menu-icon {
+        display: none;
+        font-size: 50px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    nav ul li {
+        font-size: 150%;
+        display: inline-block;
+        float: left;
+        padding: 10px;
+    }
+    
+    nav ul li a {
+        color: green;
+    }
+    /*Para cambiarle el color cuando se este en la pagina*/
+    
+    .ini {
+        color: gray;
+    }
+    
+    .parteuno {
+        width: 31.5%;
+        float: right;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .partedos {
+        width: 63%;
+        float: left;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .redondear {
+        border-radius: 100%;
+        border: 10px solid rgb(39, 250, 67);
+    }
+    
+    .button {
+        border: none;
+        color: white;
+        padding: 4px 14px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+    }
+    
+    .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    footer {
+        background: #2c3e50;
+        width: 100%;
+        overflow: auto;
+        position: absolute;
+    }
+    
+    .icon-text {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .icon-text-icon {
+        float: left;
+        width: 20%;
+        padding: 4%;
+    }
+    
+    .footer-nav {
+        text-align: right;
+    }
+    
+    .footer-nav a {
+        font-size: 160%;
+        color: #c3d7df;
+        font-weight: 300;
+    }
+    
+    .footer-nav a:hover {
+        font-size: 160%;
+        color: #f5f5f5;
+    }
+    
+    .formu {
+        width: 500px;
+        background: #24303c;
+        padding: 40px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 4px;
+        font-family: 'calibri';
+        color: white;
+        box-shadow: 7px 13px 37px rgb(100, 241, 57);
+    }
+    
+    .formu h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .in {
+        width: 100%;
+        background: #24303c;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #24c51f;
+        font-family: 'calibri';
+        font-size: 18px;
+        color: white;
+    }
+    
+    .formu p {
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    
+    .formu a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .formu a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .formu .boton {
+        width: 100%;
+        background: #1fc527;
+        border: none;
+        padding: 12px;
+        color: white;
+        margin: 16px 0;
+        font-size: 16px;
+    }
+    /*Para el loading*/
+    
+    #loading {
+        background-color: rgba(25, 25, 25, 0.7);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+        margin-top: 0;
+        top: 0;
+        text-align: center;
+    }
+    
+    #loading img {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        margin-top: -50px;
+        margin-left: -50px;
+        margin-left: 50%;
+        top: 50%;
+    }
+</style>
+
+<body>
+    <div>
+        <section class="formu">
+            <h3>Inicia Sesión</h3>
+            <input class="in" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+            <input class="in" type="password" name="contra" id="contra" placeholder="Ingrese su Contraseña">
+            <input class="boton" type="submit" value="Iniciar">
+        </section>
+    </div>
+</body>
+
+</html>
