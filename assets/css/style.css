@@ -638,6 +638,8 @@ section {
     font-weight: 600;
     margin: 10px 0 15px 0;
     font-size: 20px;
+    text-transform: lowercase;
+    color: #414c64;
 }
 
 .services .icon-box h4 a {
@@ -649,6 +651,8 @@ section {
     line-height: 24px;
     font-size: 14px;
     margin-bottom: 0;
+    text-align: justify;
+    color: #414c64;
 }
 
 .services .icon-box:hover {
