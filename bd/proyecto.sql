@@ -41,9 +41,6 @@ foreign key (ID_Org)
 ID_Resp smallint not null,
 foreign key (ID_Resp)
 	references Responsable(ID),
-ID_Perfil smallint not null,
-foreign key (ID_Perfil)
-	references Perfil(ID),
 primary key (ID)
 );
 
@@ -51,7 +48,10 @@ create table perfil(
 	ID smallint not null auto_increment,
 	Resultado char(40) not null,
     Fecha_Nac date not null,
-primary key(ID)
+    ID_persona smallint not null,
+	foreign key (ID_persona)
+		references Persona(ID),
+	primary key(ID)
 );
 
 select * from perfil;
