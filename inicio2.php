@@ -102,7 +102,7 @@ $conexion = new mysqli($servidor, $cuenta, $password, $bd);
                             if (isset($_POST['institucion'])) {
                                 $ins = $_POST['institucion'];
                             }
-                            $sql = $conexion->query("SELECT * from responsable WHERE ID_Org ='" . $ins . "'");
+                            $sql = $conexion->query("SELECT * from responsable WHERE (Tipo!='padre' or Tipo!='madre') and ID_Org ='" . $ins . "'");
                             while ($fila = $sql->fetch_array()) {
                                 echo "<option value='" . $fila['ID'] . "'>" . $fila['Nombre'] . ' ' . $fila['Apellido_P'] . ' ' . $fila['Apellido_M'] . "</option>";
                             }
