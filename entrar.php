@@ -22,8 +22,9 @@
             <input type="password" id="contraseña" name="contraseña" formControlName="contraseña" class="fadeIn third" placeholder="Contraseña" required>
             
             <input type="submit" class="fadeIn fourth" value="Iniciar Sesión">
-            <p>Si desea registrarse de click <a href="inicio.html">Aqui</a></p>
-            <p>volver a la página <a href="index.html">principal</a></p>
+            <p>Si desea registrarse de click <a href="inicio.php">Aqui</a></p>
+            <p>Volver a la página <a href="index.php" id="entrar">principal</a></p>
+
           </form>
         </div>
     </div>

@@ -56,9 +56,9 @@
                     <li><a href="#about">ACERCA DE</a></li>
                     <li><a href="#faq">PREGUNTAS FRECUENTES</a></li>
                     <li><a href="#contact">CONTACTO</a></li>
-                    <li><a target="_blank" href="juego.html">VIDEJUEGO</a></li>
+                    <li><a target="_blank" href="juego.html">VIDEOJUEGO</a></li>
                     <!--<button class="button button1" id="iniciar">Iniciar Sesion</button>-->
-                    <li><a href="entrar.html" id="iniciar">INICIAR SESION</a></li>
+                    <li><a href="entrar.html" id="iniciar">INICIAR SESIÓN</a></li>
                 </ul>
             </nav>
             <!-- .nav-menu -->

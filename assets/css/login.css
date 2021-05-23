@@ -200,10 +200,10 @@ input[type=text]:placeholder {
   transition: all .5s ease;
 	width: 70%;
 	border-radius: 30px;
-	color: #ffcb74;
+	color: #fff;
 	font-weight: 600;
-	background-color: #fff;
-	border: 1px solid #ffcb74;
+	background-color: #ffc107;
+	border: 1px solid #fff;
 	margin-top: 1.5em;
 	margin-bottom: 1em;
 	align-content: center;
@@ -232,4 +232,8 @@ input[type=text]:placeholder {
 
 * {
   box-sizing: border-box;
+}
+
+.formulario{
+  margin-top: 400px;
 }
