@@ -5,8 +5,12 @@
     }
   
     create(){
-        this.add.image(400, 300, 'fondo1');
-        this.start_button = this.add.image(380,300,"empezar").setInteractive();
+        this.background = this.add.tileSprite(0,0, config.width, config.height, "fondo1");
+        this.background.setOrigin(0,0);
+        this.background.setScale(1.1);
+
+       // this.add.image(400, 300, 'fondo1');
+        this.start_button = this.add.image(config.width/2,config.height/2,"empezar").setInteractive();
         this.start_button.setScale(.6);
         this.start_button.on('pointerdown',()=>{
             vidas = 3;
@@ -14,7 +18,7 @@
         });
 
         //setting the footer of the authors
-        this.add.text(300,config.height-20,'Videojuego "Empatines"', {
+        this.add.text(config.width / 2,config.height-40,'Videojuego "Empatines"', {
             font: "15px Arial", 
             fill: "white"
         });
