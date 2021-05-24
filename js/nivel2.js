@@ -44,23 +44,26 @@ class nivel2 extends Phaser.Scene{
      create ()
     {
         //Añadir una imagen de fondo
-        this.add.image(400, 300, 'fondon2');
+        this.fondoN2 = this.add.tileSprite(0,0, config.width, config.height, "fondon2");
+        this.fondoN2.setOrigin(0,0);
+        this.fondoN2.setScale(1.05);
+        //this.add.image(400, 300, 'fondon2');
         // The player and its settings
         jugador = this.physics.add.sprite(100, 450, 'anima');
         plataformas = this.physics.add.staticGroup();
         vidasJuego = this.physics.add.staticGroup();
         
-        plataformas.create(150,460,"rampas");
-        plataformas.create(650,160,"rampas");
-        plataformas.create(350,300,"rampas");
-        plataformas.create(150,140,"rampas");
-        plataformas.create(650,560,"rampas");
+        plataformas.create(config.width * 0.15,config.height * 0.30,"rampas");
+        plataformas.create(config.width * 0.85,config.height * 0.30,"rampas");
+        plataformas.create(config.width * 0.5,config.height * 0.55,"rampas");
+        plataformas.create(config.width * 0.25,config.height * 0.80,"rampas");
+        plataformas.create(config.width * 0.85,config.height * 0.80,"rampas");
         
 // 
-jugador.setBounce(0.2);
-jugador.setCollideWorldBounds(true);
+        jugador.setBounce(0.2);
+        jugador.setCollideWorldBounds(true);
         
-        plataformas.create(400,600,"piso").refreshBody();
+        plataformas.create(config.width/2,config.height-5,"piso").refreshBody();
         enemigos = this.physics.add.group();
         var long = (jugador.x<400)? Phaser.Math.Between(400,800):Phaser.Math.Between(0,400);
         var enemigo = enemigos.create(long,16,"bomba");
@@ -74,17 +77,17 @@ jugador.setCollideWorldBounds(true);
         enemigo1.setCollideWorldBounds(true);
         enemigo1.setVelocity(Phaser.Math.Between(-200,200),20);
         if(vidas == 3){
-            vidasJuego.create(690,30,"vida1");
-            vidasJuego.create(730,30,"vida1");
-            vidasJuego.create(770,30,"vida1");
+            vidasJuego.create(config.width-125,30,"vida1");
+            vidasJuego.create(config.width-90,30,"vida1");
+            vidasJuego.create(config.width-55,30,"vida1");
         }else if(vidas == 2){
-            vidasJuego.create(690,30,"vida");
-            vidasJuego.create(730,30,"vida1");
-            vidasJuego.create(770,30,"vida1");
+            vidasJuego.create(config.width-125,30,"vida");
+            vidasJuego.create(config.width-90,30,"vida1");
+            vidasJuego.create(config.width-55,30,"vida1");
         }else if(vidas ==1){
-            vidasJuego.create(690,30,"vida");
-            vidasJuego.create(730,30,"vida");
-            vidasJuego.create(770,30,"vida1");
+            vidasJuego.create(config.width-125,30,"vida");
+            vidasJuego.create(config.width-90,30,"vida");
+            vidasJuego.create(config.width-55,30,"vida1");
         }
         
         
@@ -113,8 +116,8 @@ jugador.setCollideWorldBounds(true);
         cursors = this.input.keyboard.createCursorKeys();
         dulces2 = this.physics.add.group({
             key: 'dulce2',
-            repeat: 10,
-            setXY: { x: 30, y: 0, stepX: 70 }
+            repeat: 14,
+            setXY: { x: 45, y: 0, stepX: 80 }
         });
         
         dulces2.children.iterate(function (child) {
@@ -175,23 +178,23 @@ jugador.setCollideWorldBounds(true);
         if ((dulces2.countActive(true) === 0) && (ban1 == 0))
                     {
                         preguntas = this.physics.add.staticGroup();
-                        preguntas.create(380,30,"pregunta2").setScale(.6);
+                        preguntas.create(config.width/2,50,"pregunta2").setScale(1);
                         trofeos = this.physics.add.staticGroup();
                         trofeo1 = this.physics.add.staticGroup();
                         trofeo2 = this.physics.add.staticGroup();
                         trofeo3 = this.physics.add.staticGroup();
                         trofeo4 = this.physics.add.staticGroup();
-                        plataformas.create(150,460,"nunca");
-                        plataformas.create(650,160,"casinunca");
-                        plataformas.create(350,300,"pocasveces");
-                        plataformas.create(150,140,"muchasveces");
-                        plataformas.create(650,560,"siempre");
+                        plataformas.create(config.width * 0.15,config.height * 0.30,"nunca");
+                        plataformas.create(config.width * 0.85,config.height * 0.30,"casinunca");
+                        plataformas.create(config.width * 0.5,config.height * 0.55,"pocasveces");
+                        plataformas.create(config.width * 0.25,config.height * 0.80,"muchasveces");
+                        plataformas.create(config.width * 0.85,config.height * 0.80,"siempre");
                         //trofeo2 = this.physics.add.create(250,410,"ruedita").setScale(.5);
-                        trofeos.create(70,415,"cas");
-                        trofeo1.create(650,120,"cas");
-                        trofeo2.create(390,255,"cas");
-                        trofeo3.create(150,100,"cas");
-                        trofeo4.create(650,520,"cas");
+                        trofeos.create(config.width * 0.15,config.height * 0.24,"cas");
+                        trofeo1.create(config.width * 0.85,config.height * 0.24,"cas");
+                        trofeo2.create(config.width * 0.5,config.height * 0.49,"cas");
+                        trofeo3.create(config.width * 0.25,config.height * 0.74,"cas");
+                        trofeo4.create(config.width * 0.85,config.height * 0.74,"cas");
                         jugador.x = 500;
                         jugador.y = 300;
                         //Cuando chocab
@@ -237,21 +240,23 @@ jugador.setCollideWorldBounds(true);
     muerte(jugador,enemigos){
         //this.physics.pause();
         //vidasJuego.disableBody(true,true);
+        
+        
+        
         if(vidas==3){
-            vidasJuego.create(690,30,"vida");
-            
+            vidasJuego.create(config.width-125,30,"vida");
         }else if(vidas==2){
-            vidasJuego.create(730,30,"vida");
+            vidasJuego.create(config.width-90,30,"vida");
         }
         else{
-            vidasJuego.create(770,30,"vida");
+            vidasJuego.create(config.width-55,30,"vida");
             this.physics.pause();
             audioPlay.stop();
             this.scene.start('perdio');
              
         }
         vidas-=1;
-        enemigos.x = 300;
+        enemigos.x = config.width/2;
         enemigos.y=20;
     }
 }
